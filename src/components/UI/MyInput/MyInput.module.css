@@ -1,0 +1,14 @@
+.input {
+    margin-top: 8px;
+    outline: none;
+    border: 1px solid #CED4DA;
+    padding: 10px 15px;
+}
+
+.input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.input:focus {
+    border: 1px solid #7971ea;
+}

@@ -1,0 +1,10 @@
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+*,
+*:before,
+*:after {
+    margin: 0;
+    box-sizing: border-box;
+}

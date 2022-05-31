@@ -1,0 +1,8 @@
+.text {
+    font-size: 1em;
+    color: #798aa8;
+}
+
+.text::first-letter {
+    text-transform: capitalize;
+}

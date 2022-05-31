@@ -1,0 +1,9 @@
+.imageBlock {
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+}
+
+.imageWrap {
+    width: 100%;
+}

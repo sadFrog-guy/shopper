@@ -1,0 +1,12 @@
+.logo{
+    border: 2px solid black;
+    padding: 2px 16px;
+}
+
+.logo_text {
+    font-family: 'Mukta', sans-serif;
+    font-size: 20px;
+    letter-spacing: 5px;
+    color: #000;
+    text-decoration: none;
+}

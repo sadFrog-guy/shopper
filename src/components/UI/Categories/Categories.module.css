@@ -1,0 +1,21 @@
+.categories {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #edf0f5;
+    padding: 15px;
+}
+
+.variant {
+    cursor: pointer;
+    margin-top: 3px;
+    color: #7971ea;
+    transition: color .2s;
+}
+
+.variant.selected {
+    color: #453eaf;
+}
+
+.variant:hover {
+    color: #5A50E5;
+}

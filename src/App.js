@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+} from "react-router-dom";
+import Home from "./pages/home";
+import Shop from "./pages/shop";
+import Detail from "./pages/detail";
+import Basket from "./pages/basket";
+import {useContext, useEffect} from "react";
+import {Context} from "./index";
+import {fetchBrands, fetchLastProduct, fetchProducts, fetchTypes} from "./service/productAPI";
+import {observer} from "mobx-react-lite";
+import AdminMenu from "./components/UI/AdminMenu/AdminMenu";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = observer(() => {
+    const {product} = useContext(Context)
+
+    useEffect(() => {
+        fetchLastProduct().then(data => product.setLast(data.data))
+    }, [])
+
+    return (
+        <Router>
+            <Routes>
+                <Route path="/" element={<Home/>}/>
+                <Route path="/products" element={<Shop/>}/>
+                <Route path="/products/:productId" element={<Detail/>}/>
+                <Route path="/basket" element={<Basket/>}/>
+            </Routes>
+        </Router>
+    );
+})
 
 export default App;

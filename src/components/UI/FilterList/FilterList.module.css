@@ -1,0 +1,7 @@
+.wrapper {
+    padding: 15px;
+    border: 1px solid #edf0f5;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}

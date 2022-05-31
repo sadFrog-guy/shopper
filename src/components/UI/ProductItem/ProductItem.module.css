@@ -1,0 +1,33 @@
+
+.body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 180px;
+    overflow: hidden;
+}
+
+.title {
+    font-size: 20px;
+    color: #7971ea;
+    margin-bottom: 12px;
+    transition: color .2s;
+}
+
+.title:hover {
+    color: #5A50E5;
+}
+
+.description {
+    text-align: center;
+    color: #798aa8;
+    margin-bottom: 12px;
+    width: 100%;
+}

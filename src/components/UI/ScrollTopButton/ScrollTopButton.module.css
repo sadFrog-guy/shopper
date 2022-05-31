@@ -1,0 +1,12 @@
+.wrapper {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border-radius: 100%;
+    background-color: #7971ea;
+}

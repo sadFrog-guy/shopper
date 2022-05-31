@@ -1,0 +1,17 @@
+.select {
+    margin-top: 8px;
+    outline: none;
+    border: 1px solid #CED4DA;
+    padding: 10px 15px;
+    transition: all .2s;
+    -webkit-appearance: none;
+}
+
+.select:focus {
+    border: 1px solid #7971ea;
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+}

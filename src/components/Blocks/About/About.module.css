@@ -1,0 +1,106 @@
+.wrapper {
+    min-height: 80vh;
+    max-height: 110vh;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #A6F3ED;
+}
+
+.wrapper > * {
+    flex: 1 1 300px;
+}
+
+.shoes {
+    width: 60%;
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: center;
+}
+
+.shoes_image {
+    width: 80%;
+}
+
+.shoes_image.active {
+    animation-name: appearanceAnim;
+    animation-duration: 1s;
+}
+
+.shoes_image.hover {
+    animation-name: shakingAnim;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.info {
+    width: 40%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.info_title {
+    font-size: 2.8em;
+    font-weight: 700;
+    text-align: left;
+}
+
+.info_text {
+    width: 70%;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+@media (max-width: 655px) {
+    .info {
+        align-items: center;
+    }
+    .info_text {
+        text-align: center;
+    }
+    .info_title {
+        text-align: center;
+    }
+}
+
+@keyframes shakingAnim {
+    0% {
+        width: 80%;
+        transform: rotate(0deg);
+    }
+
+    25% {
+        width: 83%;
+        transform: rotate(6deg);
+    }
+
+    50% {
+        width: 80%;
+        transform: rotate(-6deg);
+    }
+
+    75% {
+        width: 83%;
+        transform: rotate(6deg);
+    }
+
+    100% {
+        width: 80%;
+        transform: rotate(0);
+    }
+}
+
+@keyframes appearanceAnim {
+    from {
+        transform: translateX(-200px);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}

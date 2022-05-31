@@ -1,0 +1,29 @@
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #edf0f5;
+    padding: 30px;
+}
+
+.products_wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.filter_wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+}
+
+.sort {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.option {
+    margin-bottom: 4px;
+}
