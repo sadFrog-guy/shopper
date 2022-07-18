@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from "react-router-dom";
-import {baseURL, SINGLE_PRODUCT} from "../../../service/consts";
-import {Card, Col} from "react-bootstrap";
+import {baseURL} from "../../../service/consts";
+import {Card} from "react-bootstrap";
 import cl from './ProductItem.module.css'
 import Price from "../Price/Price";
 import {observer} from "mobx-react-lite";
@@ -24,9 +24,9 @@ const ProductItem = observer(({product}) => {
                     : product.description
                 }
             </span>
-                <Price fs={24}>
-                    ${product.price}.00
-                </Price>
+            <Price fs={24}>
+                ${product.price}.00
+            </Price>
             </div>
         </Card>
     );

@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState} from 'react';
+import React, {useContext} from 'react';
 import Title from "../../UI/Title/Title";
 import HoverLink from "../../UI/HoverLink/HoverLink";
 import cl from './Footer.module.css'

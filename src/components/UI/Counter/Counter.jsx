@@ -1,7 +1,6 @@
-import React, {useContext, useEffect, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import cl from './Counter.module.css'
 import {observer} from "mobx-react-lite";
-import {Context} from "../../../index";
 
 const Counter = observer(({setter}) => {
     const [value, setValue] = useState(1)

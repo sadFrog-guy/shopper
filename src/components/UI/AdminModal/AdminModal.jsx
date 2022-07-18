@@ -14,7 +14,6 @@ import ColorPicker from "../ColorPicker/ColorPicker";
 import SplittedItemWrapper from "../SplittedItemWrapper/SplittedItemWrapper";
 import FileUpload from "../FileUpload/FileUpload";
 import {createProduct, fetchProducts} from "../../../service/productAPI";
-import logo from "../Logo/Logo";
 import {observer} from "mobx-react-lite";
 
 const AdminModal = observer(({setActive}) => {

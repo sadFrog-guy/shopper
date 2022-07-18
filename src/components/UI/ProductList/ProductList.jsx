@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useMemo, useState} from 'react';
+import React, {useContext, useEffect} from 'react';
 import cl from './ProductList.module.css'
 import {Context} from "../../../index";
 import {toJS} from "mobx";
@@ -6,7 +6,6 @@ import {fetchBrands, fetchProducts, fetchTypes} from "../../../service/productAP
 import ProductItem from "../ProductItem/ProductItem";
 import Loader from "../Loader/Loader";
 import {observer} from "mobx-react-lite";
-import {Row} from "react-bootstrap";
 
 const ProductList = observer(() => {
     const {product, sort} = useContext(Context)

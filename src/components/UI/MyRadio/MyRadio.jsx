@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import React from 'react';
 import cl from './MyRadio.module.css'
-import {css, jsx} from '@emotion/react'
+import {css} from '@emotion/react'
 import MyLabel from "../MyLabel/MyLabel";
 
 const MyRadio = ({label, value, color, onChange, name, ...props}) => {

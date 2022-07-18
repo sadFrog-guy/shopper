@@ -18,15 +18,12 @@
     display: flex;
     margin-bottom: 10px;
     justify-content: center;
+    animation-name: appearanceAnim;
+    animation-duration: 1s;
 }
 
 .shoes_image {
     width: 80%;
-}
-
-.shoes_image.active {
-    animation-name: appearanceAnim;
-    animation-duration: 1s;
 }
 
 .shoes_image.hover {
@@ -97,10 +94,12 @@
 
 @keyframes appearanceAnim {
     from {
+        opacity: 0;
         transform: translateX(-200px);
     }
 
     to {
+        opacity: 100%;
         transform: translateX(0);
     }
 }

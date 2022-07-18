@@ -1,9 +1,8 @@
-import React, {useContext, useEffect, useMemo, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import cl from './DraggableProgress.module.css'
 import Text from "../Text/Text";
 import Title from "../Title/Title";
 import {Context} from "../../../index";
-import {toJS} from "mobx";
 
 const DraggableProgress = ({int}) => {
     const {sort, product} = useContext(Context)

@@ -1,5 +1,4 @@
 import React from 'react';
-import {BsFillHouseFill} from "react-icons/bs";
 import {Link, useLocation} from "react-router-dom";
 import cl from './NavItem.module.css'
 

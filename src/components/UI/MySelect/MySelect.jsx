@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState} from 'react';
+import React, {useContext, useState} from 'react';
 import cl from './MySelect.module.css'
 import {IoMdArrowDropdownCircle, IoMdArrowDropupCircle} from "react-icons/io";
 import {Context} from "../../../index";

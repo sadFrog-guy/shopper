@@ -1,7 +1,6 @@
-import React, {useContext, useState} from 'react';
-import cl from './TypeFilter.module.css'
+import React, {useContext} from 'react';
 import {Context} from "../../../index";
-import {toJS, values} from "mobx";
+import {toJS} from "mobx";
 import MyAccordion from "../MyAccordion/MyAccordion";
 import MyRadio from "../MyRadio/MyRadio";
 import Loader from "../Loader/Loader";

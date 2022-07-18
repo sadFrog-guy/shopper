@@ -1,5 +1,5 @@
 import React, {useContext, useEffect, useState} from 'react';
-import {useLocation, useParams} from "react-router-dom";
+import {useParams} from "react-router-dom";
 import {Context} from "../../../index";
 import {toJS} from "mobx";
 import {fetchOneBrand, fetchOneProduct, fetchOneType} from "../../../service/productAPI";
@@ -13,7 +13,6 @@ import Counter from "../../UI/Counter/Counter";
 import MyButton from "../../UI/MyButton/MyButton";
 import ImageWrapper from "../../UI/ImageWrapper/ImageWrapper";
 import Price from "../../UI/Price/Price";
-import {css} from "@emotion/react";
 
 const ProductDetail = observer(() => {
     const {productId} = useParams()
@@ -41,36 +40,10 @@ const ProductDetail = observer(() => {
     }, [])
 
     useEffect(() => {
-        if(singleProduct.length !== 0) {
-            selectProductId(singleProduct.id)
-        }
-    }, [singleProduct])
-
-    useEffect(() => {
         if(basket.selectedProductId && basket.selectedAmount && basket.selectedSize) {
             setCollectedData(true)
         }
     }, [basket.selectedProductId, basket.selectedAmount, basket.selectedSize])
-
-    const selectProductId = (pid) => {
-        basket.setSelectedProductId(pid)
-    }
-
-    const selectAmount = (amount) => {
-        basket.setSelectedAmount(amount)
-    }
-
-    const selectSize = (e) => {
-        basket.setSelectedSize(e.target.value)
-    }
-
-    const buttonOnClick = () => {
-        basket.setProductsInBasket({
-            productId: basket.selectedProductId,
-            amount: basket.selectedAmount,
-            size: basket.selectedSize,
-        })
-    }
 
     return (
         <div className={cl.wrapper}>
@@ -112,17 +85,15 @@ const ProductDetail = observer(() => {
                                 label={size}
                                 style={{marginRight: '10px'}}
                                 key={size}
-                                onChange={(e) => selectSize(e)}
                             />
                         )
                     })}
                 </div>
                 <div className={cl.counterAndButton}>
-                    <Counter setter={selectAmount}/>
+                    {/*<Counter setter={}/>*/}
                     <MyButton
                         style={{marginLeft: 10, marginBottom: 0}}
                         disabled={!dataIsCollected}
-                        onClick={buttonOnClick}
                     >
                         add to cart
                     </MyButton>

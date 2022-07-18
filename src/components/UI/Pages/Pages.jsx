@@ -1,8 +1,9 @@
 import React, {useContext, useEffect} from 'react';
 import {observer} from "mobx-react-lite";
-import {Pagination} from "react-bootstrap";
+import {PageItem, Pagination} from "react-bootstrap";
 import {Context} from "../../../index";
 import {fetchProducts} from "../../../service/productAPI";
+import './Pages.module.css'
 
 const Pages = observer(() => {
     const {product} = useContext(Context)
@@ -28,19 +29,39 @@ const Pages = observer(() => {
     }, [product.page])
 
     return (
-        <Pagination className="justify-content-center">
-            {pages.map(page => {
-                return (
-                    <Pagination.Item
-                        key={page}
-                        active={product.page === page}
-                        onClick={() => product.setPage(page)}
-                    >
-                        {page}
-                    </Pagination.Item>
-                )
-            })}
-        </Pagination>
+        <>
+            <style type="text/css">
+                {`
+                    .page-item.active .page-link {
+                        background-color: #7971EA;
+                    }
+                    
+                    .page-link {
+                        color: #7971EA;
+                    }
+                `}
+            </style>
+
+            <Pagination className="justify-content-center">
+                {pages.map(page => {
+                    return (
+                        <PageItem
+                            key={page}
+                            active={product.page === page}
+                            onClick={() => {
+                                product.setPage(page)
+                                window.scrollTo({
+                                    top: 0,
+                                    behavior: 'smooth'
+                                })
+                            }}
+                        >
+                            {page}
+                        </PageItem>
+                    )
+                })}
+            </Pagination>
+        </>
     );
 });
 

@@ -1,9 +1,8 @@
-import React, {useContext, useEffect, useMemo, useState} from 'react';
+import React, {useContext} from 'react';
 import cl from './Categories.module.css'
 import Title from "../Title/Title";
 import {Context} from "../../../index";
 import {categories} from "../../../service/consts";
-import {toJS} from "mobx";
 import {observer} from "mobx-react-lite";
 
 const Categories = observer(() => {

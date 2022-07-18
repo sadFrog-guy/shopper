@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState} from 'react';
+import React, {useContext} from 'react';
 import MyButton from "../MyButton/MyButton";
 import cl from './ApplyFiltersButton.module.css'
 import {Context} from "../../../index";

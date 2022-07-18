@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import sh from "../../../static/hero_1.png";
 import cl from './About.module.css'
 import MyButton from "../../UI/MyButton/MyButton";
@@ -6,22 +6,9 @@ import {Link} from "react-router-dom";
 import {PRODUCTS} from "../../../service/consts";
 
 const About = () => {
-    const [isVisible, setIsVisible] = useState(false)
     const [isOnHover, setOnHover] = useState(false)
     const rootClasses = [cl.shoes_image]
 
-    useEffect(() => {
-        setTimeout(() => {
-            setIsVisible(true)
-        }, 100)
-        setTimeout(() => {
-            setIsVisible(false)
-        }, 1000)
-    }, [])
-
-    if(isVisible) {
-        rootClasses.push(cl.active)
-    }
     if(isOnHover) {
         rootClasses.push(cl.hover)
     }
